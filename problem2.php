@@ -1,6 +1,9 @@
 <?php 
   echo "Enter text, line by line. Finish with an empty line.\n";
   
+  $letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  $rotated = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+  
   $handle = fopen("php://stdin", "r");
   $lines = array();
   
@@ -17,8 +20,10 @@
   
   $rot = array();
   foreach($lines as $line) {
-    
+	  $rot[] = strtr($line, $letters, $rotated);
   }
-  
-  print_r($lines);
+
+  foreach($rot as $line) {
+	  echo $line . "\n";
+  }
 ?>
