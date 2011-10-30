@@ -1,29 +1,23 @@
 <?php 
-  echo "Enter text, line by line. Finish with an empty line.\n";
-  
   $letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   $rotated = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
   
   $handle = fopen("php://stdin", "r");
-  $lines = array();
+  $input = "";
   
-  do {
-    echo "> ";
-    
-    $line = trim(fgets($handle));
-    
-    if ($line != "") {
-      $lines[] = $line;
-    }
-    
-  } while($line != "");
+  while ($tmp = fgets($handle)) {
+	  $input = $input . $tmp;
+  }
   
-  $rot = array();
-  foreach($lines as $line) {
-	  $rot[] = strtr($line, $letters, $rotated);
-  }
-
-  foreach($rot as $line) {
-	  echo $line . "\n";
-  }
+  // Lines
+  echo "\n# of lines: " . count(explode("\n", $input));
+  // Words
+  echo "\n# of words: " . count(preg_split("/\s+/", $input));
+  // Characters
+  echo "\n# of characters: " . strlen($input);
+  
+  // Rot13
+  $rot = strtr($input, $letters, $rotated);
+  echo "\nRot13: \n" . $rot;
+  
 ?>
