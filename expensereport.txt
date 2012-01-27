@@ -1,0 +1,10 @@
+Name: Homer Simpson
+
+Food, 10/1/2010: $10.00 
+Transportation, 10/1/2010: $25.00 
+Transportation, 10/3/2010: $25.00 
+Lodging, 10/1/2010: $150.00 
+Lodging, 10/2/2010: $150.00
+Tip, 10/03/2010: $5.00
+Food, 10/2/2010: $30.00 
+Entertainment, 10/04/2010: $80.00

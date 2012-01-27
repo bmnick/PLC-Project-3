@@ -1,4 +1,5 @@
 <?php 
+  // Ben Nicholas, project 3 problem 2
   $letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   $rotated = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
   

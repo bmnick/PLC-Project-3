@@ -1,4 +1,5 @@
 <?php 
+  // Ben Nicholas, project 3 problem 3
   function array_transpose($array) { 
     if (!is_array($array)) return false; 
     $return = array(); 
